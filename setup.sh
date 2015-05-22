@@ -2,7 +2,7 @@
 
 set -e
 
-unlink ~/.vimrc
+[ -l ~/.vimrc ] && unlink ~/.vimrc
 [ -f ~/.vimrc ] && echo 'you should backup and remove your ~/.vimrc' && exit 1
 
 echo 'installing'
