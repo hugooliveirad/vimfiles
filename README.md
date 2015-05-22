@@ -1,4 +1,4 @@
-# Vim files
+# vimfiles
 
 minimal vimfiles
 
