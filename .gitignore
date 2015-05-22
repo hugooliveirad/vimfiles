@@ -1,3 +1,5 @@
 tmp/
 bundle/
 !bundle/vundle
+.swp
+.swo
