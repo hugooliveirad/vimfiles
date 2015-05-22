@@ -1,3 +1,3 @@
 # Vim files
 
-minimalistic vimfiles
+minimal vimfiles
