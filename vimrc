@@ -42,6 +42,15 @@ Bundle 'rking/ag.vim'
 " Velocity support *shrugs*
 Bundle 'lepture/vim-velocity'
 
+" Clojure syntax highlighting
+Bundle 'guns/vim-clojure-static'
+
+" Improve edit of Clojure s-expressions
+Bundle 'guns/vim-sexp'
+
+" Great mappings for vim-sexp
+Bundle 'tpope/vim-sexp-mappings-for-regular-people'
+
 " =======================================
 " Configs
 " =======================================
@@ -66,6 +75,8 @@ set laststatus=2    " always shows the status line
 autocmd BufNewFile,BufRead *.html.ejs set syntax=html
 autocmd BufNewFile,BufRead *.erb      set syntax=html
 autocmd BufNewFile,BufRead *.vm       set ft=velocity
+autocmd BufNewFile,BufRead *.clj      set ft=clojure
+autocmd BufNewFile,BufRead *.cljs     set ft=clojure
 
 " setting theme
 colorscheme bubblegum
