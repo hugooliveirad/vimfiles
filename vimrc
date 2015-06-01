@@ -69,6 +69,8 @@ set ai
 set incsearch
 set scrolloff=3     " offsets the scroll when possible
 set laststatus=2    " always shows the status line
+set ignorecase      " case-insensitive search
+set smartcase       " but case-sensitive if contains capital letter
 autocmd BufNewFile,BufRead *.html.ejs set syntax=html
 autocmd BufNewFile,BufRead *.erb      set syntax=html
 autocmd BufNewFile,BufRead *.vm       set ft=velocity
