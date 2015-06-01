@@ -45,11 +45,8 @@ Bundle 'lepture/vim-velocity'
 " Clojure syntax highlighting
 Bundle 'guns/vim-clojure-static'
 
-" Improve edit of Clojure s-expressions
-Bundle 'guns/vim-sexp'
-
-" Great mappings for vim-sexp
-Bundle 'tpope/vim-sexp-mappings-for-regular-people'
+" ES6 support
+Bundle 'pangloss/vim-javascript'
 
 " =======================================
 " Configs
