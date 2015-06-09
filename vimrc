@@ -48,6 +48,9 @@ Bundle 'guns/vim-clojure-static'
 " ES6 support
 Bundle 'pangloss/vim-javascript'
 
+" Beautiful color scheme
+Bundle 'yosiat/oceanic-next-vim'
+
 " =======================================
 " Configs
 " =======================================
@@ -71,6 +74,7 @@ set scrolloff=3     " offsets the scroll when possible
 set laststatus=2    " always shows the status line
 set ignorecase      " case-insensitive search
 set smartcase       " but case-sensitive if contains capital letter
+set guifont=Monaco\ for\ Powerline:h13
 autocmd BufNewFile,BufRead *.html.ejs set syntax=html
 autocmd BufNewFile,BufRead *.erb      set syntax=html
 autocmd BufNewFile,BufRead *.vm       set ft=velocity
@@ -78,4 +82,4 @@ autocmd BufNewFile,BufRead *.clj      set ft=clojure
 autocmd BufNewFile,BufRead *.cljs     set ft=clojure
 
 " setting theme
-colorscheme bubblegum
+colorscheme OceanicNext
