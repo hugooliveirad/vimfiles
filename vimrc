@@ -51,6 +51,9 @@ Bundle 'pangloss/vim-javascript'
 " Beautiful color scheme
 Bundle 'yosiat/oceanic-next-vim'
 
+" Markdown
+Bundle 'plasticboy/vim-markdown'
+
 " =======================================
 " Configs
 " =======================================
