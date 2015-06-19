@@ -64,7 +64,6 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set ruler           " show cursor position
-set cursorline      " hightlight for actual line
 set number          " show numbers
 set hlsearch        " set highlight for search
 set nowrap          " set no wrap for big lines
@@ -83,6 +82,10 @@ autocmd BufNewFile,BufRead *.erb      set syntax=html
 autocmd BufNewFile,BufRead *.vm       set ft=velocity
 autocmd BufNewFile,BufRead *.clj      set ft=clojure
 autocmd BufNewFile,BufRead *.cljs     set ft=clojure
+autocmd BufNewFile,BufRead *.md       set ft=markdown
 
 " setting theme
 colorscheme OceanicNext
+
+" Markdown configs
+au FileType markdown set wrap linebreak nolist textwidth=80 
