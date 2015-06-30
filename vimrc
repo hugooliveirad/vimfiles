@@ -33,9 +33,6 @@ Bundle 'kien/ctrlp.vim'
 " Git Gutter
 Bundle 'airblade/vim-gitgutter'
 
-" Auto space while typing
-Bundle 'jiangmiao/auto-pairs'
-
 " Ag for searching projects
 Bundle 'rking/ag.vim'
 
@@ -53,6 +50,9 @@ Bundle 'yosiat/oceanic-next-vim'
 
 " Markdown
 Bundle 'plasticboy/vim-markdown'
+
+" REPLs
+Bundle 'jpalardy/vim-slime'
 
 " =======================================
 " Configs
