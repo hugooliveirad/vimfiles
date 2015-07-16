@@ -67,6 +67,8 @@ set ruler           " show cursor position
 set number          " show numbers
 set hlsearch        " set highlight for search
 set nowrap          " set no wrap for big lines
+set textwidth=0
+set wrapmargin=0
 set autoindent      " set autoindent
 set nobackup        " set no backup
 set background=dark
@@ -77,12 +79,17 @@ set laststatus=2    " always shows the status line
 set ignorecase      " case-insensitive search
 set smartcase       " but case-sensitive if contains capital letter
 set guifont=Monaco\ for\ Powerline:h13
+set foldlevelstart=50 " Files open expanded
+set foldmethod=indent " Use decent folding
 autocmd BufNewFile,BufRead *.html.ejs set syntax=html
 autocmd BufNewFile,BufRead *.erb      set syntax=html
 autocmd BufNewFile,BufRead *.vm       set ft=velocity
 autocmd BufNewFile,BufRead *.clj      set ft=clojure
 autocmd BufNewFile,BufRead *.cljs     set ft=clojure
 autocmd BufNewFile,BufRead *.md       set ft=markdown
+
+" Toggles folding with space
+nnoremap <Space> za
 
 " setting theme
 colorscheme OceanicNext
