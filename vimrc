@@ -39,8 +39,9 @@ Bundle 'rking/ag.vim'
 " Velocity support *shrugs*
 Bundle 'lepture/vim-velocity'
 
-" Clojure syntax highlighting
-Bundle 'guns/vim-clojure-static'
+" Clojure magic
+Bundle 'VimClojure'
+Bundle 'tpope/vim-fireplace'
 
 " ES6 support
 Bundle 'pangloss/vim-javascript'
@@ -96,3 +97,8 @@ colorscheme OceanicNext
 
 " Markdown configs
 au FileType markdown set wrap linebreak nolist textwidth=80 
+
+" VimClojure settings
+" To install nailgun on OS X, do `brew install nailgun`
+let g:vimclojure#HighlightBuiltins = 1
+let g:vimclojure#ParenRainbow = 1
