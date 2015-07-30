@@ -55,12 +55,16 @@ Bundle 'plasticboy/vim-markdown'
 " REPLs
 Bundle 'jpalardy/vim-slime'
 
+" Easily write (), [], {}...
 Bundle 'jiangmiao/auto-pairs'
 
+" Repeat commands
 Bundle 'tpope/vim-repeat'
 
+" Clojure stuff to navigate between forms
 Bundle 'guns/vim-sexp'
 
+" Better mappings for the above plugin
 Bundle 'tpope/vim-sexp-mappings-for-regular-people'
 
 " =======================================
