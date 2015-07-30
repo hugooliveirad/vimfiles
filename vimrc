@@ -55,6 +55,14 @@ Bundle 'plasticboy/vim-markdown'
 " REPLs
 Bundle 'jpalardy/vim-slime'
 
+Bundle 'jiangmiao/auto-pairs'
+
+Bundle 'tpope/vim-repeat'
+
+Bundle 'guns/vim-sexp'
+
+Bundle 'tpope/vim-sexp-mappings-for-regular-people'
+
 " =======================================
 " Configs
 " =======================================
@@ -82,6 +90,8 @@ set smartcase       " but case-sensitive if contains capital letter
 set guifont=Monaco\ for\ Powerline:h13
 set foldlevelstart=50 " Files open expanded
 set foldmethod=indent " Use decent folding
+let mapleader = ","
+let localmapleader = "\\"
 autocmd BufNewFile,BufRead *.html.ejs set syntax=html
 autocmd BufNewFile,BufRead *.erb      set syntax=html
 autocmd BufNewFile,BufRead *.vm       set ft=velocity
@@ -102,3 +112,6 @@ au FileType markdown set wrap linebreak nolist textwidth=80
 " To install nailgun on OS X, do `brew install nailgun`
 let g:vimclojure#HighlightBuiltins = 1
 let g:vimclojure#ParenRainbow = 1
+
+" Auto Pairs config
+let g:AutoPairsCenterLine = 0
