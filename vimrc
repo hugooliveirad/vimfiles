@@ -67,6 +67,14 @@ Bundle 'guns/vim-sexp'
 " Better mappings for the above plugin
 Bundle 'tpope/vim-sexp-mappings-for-regular-people'
 
+" Dependencies for vim-snippets
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+
+" Snippets on fire (probably going to add more as I go)
+Bundle "honza/vim-snippets"
+
 " =======================================
 " Configs
 " =======================================
@@ -94,8 +102,6 @@ set smartcase       " but case-sensitive if contains capital letter
 set guifont=Monaco\ for\ Powerline:h13
 set foldlevelstart=50 " Files open expanded
 set foldmethod=indent " Use decent folding
-let mapleader = ","
-let localmapleader = "\\"
 autocmd BufNewFile,BufRead *.html.ejs set syntax=html
 autocmd BufNewFile,BufRead *.erb      set syntax=html
 autocmd BufNewFile,BufRead *.vm       set ft=velocity
@@ -105,6 +111,13 @@ autocmd BufNewFile,BufRead *.md       set ft=markdown
 
 " Toggles folding with space
 nnoremap <Space> za
+
+" Map leaders
+let mapleader = ","
+let localmapleader = "\\"
+
+" Mapping to vim-snipmate
+imap <tab> <Plug>snipMateNextOrTrigger
 
 " setting theme
 colorscheme OceanicNext
