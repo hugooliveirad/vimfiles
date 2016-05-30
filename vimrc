@@ -15,7 +15,6 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
-filetype plugin indent on
 
 " =======================================
 " Plugins
@@ -36,15 +35,11 @@ Bundle 'airblade/vim-gitgutter'
 " Ag for searching projects
 Bundle 'rking/ag.vim'
 
-" Velocity support *shrugs*
-Bundle 'lepture/vim-velocity'
-
-" Clojure magic
-Bundle 'VimClojure'
-Bundle 'tpope/vim-fireplace'
-
 " ES6 support
 Bundle 'pangloss/vim-javascript'
+
+" Coffeescript
+Bundle 'kchmck/vim-coffee-script'
 
 " Beautiful color scheme
 Bundle 'yosiat/oceanic-next-vim'
@@ -52,33 +47,20 @@ Bundle 'yosiat/oceanic-next-vim'
 " Markdown
 Bundle 'plasticboy/vim-markdown'
 
-" REPLs
-Bundle 'jpalardy/vim-slime'
-
 " Easily write (), [], {}...
 Bundle 'jiangmiao/auto-pairs'
 
 " Repeat commands
 Bundle 'tpope/vim-repeat'
 
-" Clojure stuff to navigate between forms
-Bundle 'guns/vim-sexp'
-
-" Better mappings for the above plugin
-Bundle 'tpope/vim-sexp-mappings-for-regular-people'
-
-" Dependencies for vim-snippets
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
-
-" Snippets on fire (probably going to add more as I go)
-Bundle "honza/vim-snippets"
+" Git wrapper
+Bundle 'jreybert/vimagit'
 
 " =======================================
 " Configs
 " =======================================
 syntax enable       " set syntax on
+filetype plugin indent on
 set encoding=utf-8
 set wildmenu        " set vim menu
 set expandtab
@@ -104,9 +86,6 @@ set foldlevelstart=50 " Files open expanded
 set foldmethod=indent " Use decent folding
 autocmd BufNewFile,BufRead *.html.ejs set syntax=html
 autocmd BufNewFile,BufRead *.erb      set syntax=html
-autocmd BufNewFile,BufRead *.vm       set ft=velocity
-autocmd BufNewFile,BufRead *.clj      set ft=clojure
-autocmd BufNewFile,BufRead *.cljs     set ft=clojure
 autocmd BufNewFile,BufRead *.md       set ft=markdown
 
 " Toggles folding with space
@@ -116,19 +95,15 @@ nnoremap <Space> za
 let mapleader = ","
 let localmapleader = "\\"
 
-" Mapping to vim-snipmate
-imap <tab> <Plug>snipMateNextOrTrigger
+" ctrl-p for big projects (like platform)
+let g:ctrlp_max_files=0
+let g:ctrlp_max_depth=40
 
 " setting theme
 colorscheme OceanicNext
 
 " Markdown configs
 au FileType markdown set wrap linebreak nolist textwidth=80 
-
-" VimClojure settings
-" To install nailgun on OS X, do `brew install nailgun`
-let g:vimclojure#HighlightBuiltins = 1
-let g:vimclojure#ParenRainbow = 1
 
 " Auto Pairs config
 let g:AutoPairsCenterLine = 0
