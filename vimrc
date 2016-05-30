@@ -56,6 +56,11 @@ Bundle 'tpope/vim-repeat'
 " Git wrapper
 Bundle 'jreybert/vimagit'
 
+" Buffer goodness
+Bundle 'multiselect'
+Bundle 'genutils'
+Bundle 'SelectBuf'
+
 " =======================================
 " Configs
 " =======================================
