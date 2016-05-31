@@ -61,6 +61,9 @@ Bundle 'multiselect'
 Bundle 'genutils'
 Bundle 'SelectBuf'
 
+" EasyMotion (like avy for emacs)
+Bundle 'easymotion/vim-easymotion'
+
 " =======================================
 " Configs
 " =======================================
@@ -100,6 +103,9 @@ nnoremap <Space> za
 " Map leaders
 let mapleader = ","
 let localmapleader = "\\"
+
+" Easy motion improvements
+map <Leader> <Plug>(easymotion-prefix)
 
 " ctrl-p for big projects (like platform)
 let g:ctrlp_max_files=0
