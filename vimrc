@@ -111,5 +111,13 @@ colorscheme OceanicNext
 " Markdown configs
 au FileType markdown set wrap linebreak nolist textwidth=80 
 
+" Ctrlp fasteeeer
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
+
 " Auto Pairs config
 let g:AutoPairsCenterLine = 0
