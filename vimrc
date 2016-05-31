@@ -80,6 +80,7 @@ set wrapmargin=0
 set autoindent      " set autoindent
 set nobackup        " set no backup
 set background=dark
+set backspace=2     " backspace over everything
 set ai
 set incsearch
 set scrolloff=3     " offsets the scroll when possible
