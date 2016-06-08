@@ -98,6 +98,7 @@ set guifont=Fira\ Code\ Light:h15
 set foldlevelstart=50 " Files open expanded
 set foldmethod=indent " Use decent folding
 autocmd BufNewFile,BufRead *.html.ejs set syntax=html
+autocmd BufNewFile,BufRead *.elm      set ft=elm
 autocmd BufNewFile,BufRead *.erb      set syntax=html
 autocmd BufNewFile,BufRead *.md       set ft=markdown
 
