@@ -41,8 +41,17 @@ Bundle 'pangloss/vim-javascript'
 " Coffeescript
 Bundle 'kchmck/vim-coffee-script'
 
+" Elm
+Bundle 'elmcast/elm-vim'
+
 " Beautiful color scheme
-Bundle 'yosiat/oceanic-next-vim'
+Bundle 'joshdick/onedark.vim'
+Bundle 'joshdick/airline-onedark.vim'
+Bundle 'vim-airline/vim-airline-themes'
+
+Bundle 'sheerun/vim-polyglot'
+
+Bundle 'vim-airline/vim-airline'
 
 " Markdown
 Bundle 'plasticboy/vim-markdown'
@@ -55,11 +64,6 @@ Bundle 'tpope/vim-repeat'
 
 " Git wrapper
 Bundle 'jreybert/vimagit'
-
-" Buffer goodness
-Bundle 'multiselect'
-Bundle 'genutils'
-Bundle 'SelectBuf'
 
 " EasyMotion (like avy for emacs)
 Bundle 'easymotion/vim-easymotion'
@@ -90,7 +94,7 @@ set scrolloff=3     " offsets the scroll when possible
 set laststatus=2    " always shows the status line
 set ignorecase      " case-insensitive search
 set smartcase       " but case-sensitive if contains capital letter
-set guifont=Monaco\ for\ Powerline:h13
+set guifont=Fira\ Code:h15
 set foldlevelstart=50 " Files open expanded
 set foldmethod=indent " Use decent folding
 autocmd BufNewFile,BufRead *.html.ejs set syntax=html
@@ -107,12 +111,26 @@ let localmapleader = "\\"
 " Easy motion improvements
 map <Leader> <Plug>(easymotion-prefix)
 
+" airline
+let g:airline_powerline_fonts=1
+let g:airline_theme='onedark'
+
+" colorscheme
+colorscheme onedark
+let g:onedark_terminal_italics=1
+
+if (empty($TMUX))
+  if (has("nvim"))
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+  if (has("termguicolors"))
+    set termguicolors
+  endif
+endif
+
 " ctrl-p for big projects (like platform)
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
-
-" setting theme
-colorscheme OceanicNext
 
 " Markdown configs
 au FileType markdown set wrap linebreak nolist textwidth=80 
