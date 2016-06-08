@@ -111,13 +111,14 @@ let localmapleader = "\\"
 " Easy motion improvements
 map <Leader> <Plug>(easymotion-prefix)
 
+" colorscheme
+let g:onedark_termcolors=16
+colorscheme onedark
+
 " airline
 let g:airline_powerline_fonts=1
 let g:airline_theme='onedark'
 
-" colorscheme
-colorscheme onedark
-let g:onedark_terminal_italics=1
 
 if (empty($TMUX))
   if (has("nvim"))
