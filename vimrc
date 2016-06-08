@@ -63,7 +63,7 @@ Bundle 'jiangmiao/auto-pairs'
 Bundle 'tpope/vim-repeat'
 
 " Git wrapper
-Bundle 'jreybert/vimagit'
+Bundle 'tpope/vim-fugitive'
 
 " EasyMotion (like avy for emacs)
 Bundle 'easymotion/vim-easymotion'
@@ -94,7 +94,7 @@ set scrolloff=3     " offsets the scroll when possible
 set laststatus=2    " always shows the status line
 set ignorecase      " case-insensitive search
 set smartcase       " but case-sensitive if contains capital letter
-set guifont=Fira\ Code:h15
+set guifont=Fira\ Code\ Light:h15
 set foldlevelstart=50 " Files open expanded
 set foldmethod=indent " Use decent folding
 autocmd BufNewFile,BufRead *.html.ejs set syntax=html
