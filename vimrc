@@ -47,10 +47,14 @@ Bundle 'elmcast/elm-vim'
 " Beautiful color scheme
 Bundle 'joshdick/onedark.vim'
 Bundle 'joshdick/airline-onedark.vim'
-Bundle 'vim-airline/vim-airline-themes'
 
+" Buffer management
+Bundle 'jeetsukumaran/vim-buffergator'
+
+" Better syntax highlighting
 Bundle 'sheerun/vim-polyglot'
 
+" Statusline 
 Bundle 'vim-airline/vim-airline'
 
 " Markdown
@@ -119,7 +123,6 @@ colorscheme onedark
 " airline
 let g:airline_powerline_fonts=1
 let g:airline_theme='onedark'
-
 
 if (empty($TMUX))
   if (has("nvim"))
