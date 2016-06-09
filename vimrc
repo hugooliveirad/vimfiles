@@ -72,6 +72,9 @@ Bundle 'tpope/vim-fugitive'
 " EasyMotion (like avy for emacs)
 Bundle 'easymotion/vim-easymotion'
 
+" Tmux
+Bundle 'christoomey/vim-tmux-navigator'
+
 " =======================================
 " Configs
 " =======================================
@@ -136,6 +139,12 @@ endif
 " ctrl-p for big projects (like platform)
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
+
+" easier splits navigation
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
 
 " Markdown configs
 au FileType markdown set wrap linebreak nolist textwidth=80 
