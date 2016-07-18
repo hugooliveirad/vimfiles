@@ -87,6 +87,7 @@ set wildmenu        " set vim menu
 set expandtab
 set tabstop=2
 set shiftwidth=2
+set hidden          " just hide the buffer when switching files
 set ruler           " show cursor position
 set number          " show numbers
 set hlsearch        " set highlight for search
@@ -106,10 +107,23 @@ set smartcase       " but case-sensitive if contains capital letter
 set guifont=Fira\ Code\ Light:h15
 set foldlevelstart=50 " Files open expanded
 set foldmethod=indent " Use decent folding
+
 autocmd BufNewFile,BufRead *.html.ejs set syntax=html
 autocmd BufNewFile,BufRead *.elm      set ft=elm
 autocmd BufNewFile,BufRead *.erb      set syntax=html
 autocmd BufNewFile,BufRead *.md       set ft=markdown
+
+" undo improvements
+set undofile
+set undodir=$HOME/.vim/undo " persist undo info here
+
+set undolevels=1000
+set undoreload=10000        " undo info survives reloads
+
+" show hidden chars, EOL and trailing spaces
+set list
+set lcs=tab:»·
+set lcs+=trail:·
 
 " Toggles folding with space
 nnoremap <Space> za
