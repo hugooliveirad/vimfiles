@@ -46,16 +46,12 @@ Bundle 'elmcast/elm-vim'
 
 " Beautiful color scheme
 Bundle 'joshdick/onedark.vim'
-Bundle 'joshdick/airline-onedark.vim'
 
 " Buffer management
 Bundle 'jeetsukumaran/vim-buffergator'
 
 " Better syntax highlighting
 Bundle 'sheerun/vim-polyglot'
-
-" Statusline 
-Bundle 'vim-airline/vim-airline'
 
 " Markdown
 Bundle 'plasticboy/vim-markdown'
@@ -74,6 +70,12 @@ Bundle 'easymotion/vim-easymotion'
 
 " Tmux
 Bundle 'christoomey/vim-tmux-navigator'
+
+" Clojure
+Bundle 'tpope/vim-fireplace'
+Bundle 'tpope/vim-surround'
+Bundle 'guns/vim-sexp'
+Bundle 'tpope/vim-sexp-mappings-for-regular-people'
 
 " =======================================
 " Configs
@@ -119,14 +121,13 @@ let localmapleader = "\\"
 " Easy motion improvements
 map <Leader> <Plug>(easymotion-prefix)
 
+" Easy motion bindings
+map <C-f> ,s
+
+
 " colorscheme
 let g:onedark_termcolors=16
 colorscheme onedark
-
-" airline
-let g:airline_powerline_fonts=1
-let g:airline_theme='onedark'
-
 if (empty($TMUX))
   if (has("nvim"))
     let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -140,14 +141,8 @@ endif
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
 
-" easier splits navigation
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
-
 " Markdown configs
-au FileType markdown set wrap linebreak nolist textwidth=80 
+au FileType markdown set wrap linebreak nolist textwidth=80
 
 " Ctrlp fasteeeer
 if executable('ag')
