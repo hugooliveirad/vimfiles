@@ -4,6 +4,7 @@ set -e
 
 [ -l ~/.vimrc ] && unlink ~/.vimrc
 [ -f ~/.vimrc ] && echo 'you should backup and remove your ~/.vimrc' && exit 1
+mkdir -p ~/.vim/undo
 
 echo 'installing'
 ln -s ~/.vim/vimrc ~/.vimrc
