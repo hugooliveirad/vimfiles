@@ -83,6 +83,12 @@ Bundle 'mbbill/undotree'
 " Vimwiki
 Bundle 'vimwiki/vimwiki'
 
+" Syntastic
+Bundle 'scrooloose/syntastic'
+
+" Syntastic plugins
+Plugin 'amperser/proselint', {'rtp': 'plugins/vim/syntastic_proselint/'}
+
 " =======================================
 " Configs
 " =======================================
@@ -119,7 +125,7 @@ autocmd BufNewFile,BufRead *.elm      set ft=elm
 autocmd BufNewFile,BufRead *.erb      set syntax=html
 autocmd BufNewFile,BufRead *.md       set ft=markdown
 
-" Markdown configs
+" Markdown configurations
 au FileType markdown set wrap linebreak nolist textwidth=80
 
 " undo improvements
@@ -176,3 +182,12 @@ map <C-x> :CtrlPCurFile<CR>
 
 " Auto Pairs config
 let g:AutoPairsCenterLine = 0
+
+" Syntastic
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_echo_current_error=0
+let g:syntastic_text_checkers = ['proselint']
+let g:syntastic_markdown_checkers = ['proselint']
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exec = 'eslint_d'
