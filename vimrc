@@ -77,6 +77,12 @@ Bundle 'tpope/vim-surround'
 Bundle 'guns/vim-sexp'
 Bundle 'tpope/vim-sexp-mappings-for-regular-people'
 
+" Undo tree
+Bundle 'mbbill/undotree'
+
+" Vimwiki
+Bundle 'vimwiki/vimwiki'
+
 " =======================================
 " Configs
 " =======================================
@@ -113,6 +119,9 @@ autocmd BufNewFile,BufRead *.elm      set ft=elm
 autocmd BufNewFile,BufRead *.erb      set syntax=html
 autocmd BufNewFile,BufRead *.md       set ft=markdown
 
+" Markdown configs
+au FileType markdown set wrap linebreak nolist textwidth=80
+
 " undo improvements
 set undofile
 set undodir=$HOME/.vim/undo " persist undo info here
@@ -138,7 +147,6 @@ map <Leader> <Plug>(easymotion-prefix)
 " Easy motion bindings
 map <C-f> ,s
 
-
 " colorscheme
 let g:onedark_termcolors=16
 colorscheme onedark
@@ -155,9 +163,6 @@ endif
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
 
-" Markdown configs
-au FileType markdown set wrap linebreak nolist textwidth=80
-
 " Ctrlp fasteeeer
 if executable('ag')
   " Use Ag over Grep
@@ -165,6 +170,9 @@ if executable('ag')
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
+
+" Binding to open ctrlP in CurFile
+map <C-x> :CtrlPCurFile<CR>
 
 " Auto Pairs config
 let g:AutoPairsCenterLine = 0
