@@ -89,6 +89,9 @@ Bundle 'scrooloose/syntastic'
 " Syntastic plugins
 Plugin 'amperser/proselint', {'rtp': 'plugins/vim/syntastic_proselint/'}
 
+" Color schemes
+Plugin 'chriskempson/base16-vim'
+
 " =======================================
 " Configs
 " =======================================
@@ -154,8 +157,9 @@ map <Leader> <Plug>(easymotion-prefix)
 map <C-f> ,s
 
 " colorscheme
-let g:onedark_termcolors=16
-colorscheme onedark
+"let g:onedark_termcolors=16
+colorscheme base16-grayscale-dark
+
 if (empty($TMUX))
   if (has("nvim"))
     let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -191,3 +195,8 @@ let g:syntastic_text_checkers = ['proselint']
 let g:syntastic_markdown_checkers = ['proselint']
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec = 'eslint_d'
+let g:syntastic_sass_checkers = ['sass_lint']
+let g:syntastic_sass_sass_lint_args = '-qv'
+
+" Elm
+let g:elm_format_autosave = 1
