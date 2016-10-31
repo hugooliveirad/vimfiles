@@ -29,9 +29,6 @@ Bundle 'editorconfig/editorconfig-vim'
 " Ctrl p
 Bundle 'kien/ctrlp.vim'
 
-" Git Gutter
-Bundle 'airblade/vim-gitgutter'
-
 " Ag for searching projects
 Bundle 'rking/ag.vim'
 
@@ -64,6 +61,12 @@ Bundle 'tpope/vim-repeat'
 
 " Git wrapper
 Bundle 'tpope/vim-fugitive'
+
+" Git Gutter
+Bundle 'airblade/vim-gitgutter'
+
+" Git timemachine
+Bundle 'gregsexton/gitv'
 
 " EasyMotion (like avy for emacs)
 Bundle 'easymotion/vim-easymotion'
