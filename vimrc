@@ -160,8 +160,8 @@ map <Leader> <Plug>(easymotion-prefix)
 map <C-f> ,s
 
 " colorscheme
-"let g:onedark_termcolors=16
-colorscheme base16-grayscale-dark
+let g:onedark_termcolors=16
+colorscheme onedark
 
 if (empty($TMUX))
   if (has("nvim"))
