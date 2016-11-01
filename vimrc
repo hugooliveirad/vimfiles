@@ -95,6 +95,8 @@ Plugin 'amperser/proselint', {'rtp': 'plugins/vim/syntastic_proselint/'}
 " Color schemes
 Plugin 'chriskempson/base16-vim'
 
+Plugin 'vim-airline/vim-airline'
+
 " =======================================
 " Configs
 " =======================================
@@ -122,7 +124,6 @@ set scrolloff=3     " offsets the scroll when possible
 set laststatus=2    " always shows the status line
 set ignorecase      " case-insensitive search
 set smartcase       " but case-sensitive if contains capital letter
-set guifont=Fira\ Code\ Light:h15
 set foldlevelstart=50 " Files open expanded
 set foldmethod=indent " Use decent folding
 
