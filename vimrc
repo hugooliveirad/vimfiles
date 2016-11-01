@@ -126,6 +126,7 @@ set ignorecase      " case-insensitive search
 set smartcase       " but case-sensitive if contains capital letter
 set foldlevelstart=50 " Files open expanded
 set foldmethod=indent " Use decent folding
+set guifont=Roboto\ Mono\ for\ Powerline:h15
 
 autocmd BufNewFile,BufRead *.html.ejs set syntax=html
 autocmd BufNewFile,BufRead *.elm      set ft=elm
@@ -204,3 +205,6 @@ let g:syntastic_sass_sass_lint_args = '-qv'
 
 " Elm
 let g:elm_format_autosave = 1
+
+" Airline
+let g:airline_powerline_fonts = 1
