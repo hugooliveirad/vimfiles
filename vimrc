@@ -189,6 +189,16 @@ endif
 " Binding to open ctrlP in CurFile
 map <C-x> :CtrlPCurFile<CR>
 
+" Command mode and save
+nmap <c-s> :w<CR>
+imap <c-s> <esc>:w<CR>
+vmap <c-s> <esc>:w<CR>
+
+" Command mode and save
+nmap <c-q> :wq<CR>
+imap <c-q> <esc>:wq<CR>
+vmap <c-q> <esc>:wq<CR>
+
 " Auto Pairs config
 let g:AutoPairsCenterLine = 0
 
