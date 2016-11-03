@@ -32,6 +32,9 @@ Bundle 'kien/ctrlp.vim'
 " Ag for searching projects
 Bundle 'rking/ag.vim'
 
+" Searching and editing
+Plugin 'gabesoft/vim-ags'
+
 " ES6 support
 Bundle 'pangloss/vim-javascript'
 
@@ -92,10 +95,12 @@ Bundle 'scrooloose/syntastic'
 " Syntastic plugins
 Plugin 'amperser/proselint', {'rtp': 'plugins/vim/syntastic_proselint/'}
 
-" Color schemes
+" Color scheme
 Plugin 'chriskempson/base16-vim'
 
+" Status bar stuff
 Plugin 'vim-airline/vim-airline'
+
 
 " =======================================
 " Configs
