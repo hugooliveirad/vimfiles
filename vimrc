@@ -194,6 +194,11 @@ endif
 " Binding to open ctrlP in CurFile
 map <C-x> :CtrlPCurFile<CR>
 
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+
 " Command mode and save
 nmap <c-s> :w<CR>
 imap <c-s> <esc>:w<CR>
