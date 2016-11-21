@@ -164,7 +164,7 @@ let localmapleader = "\\"
 map <Leader> <Plug>(easymotion-prefix)
 
 " Easy motion bindings
-map <C-f> ,s
+map <C-c> ,s
 
 " colorscheme
 let g:onedark_termcolors=16
